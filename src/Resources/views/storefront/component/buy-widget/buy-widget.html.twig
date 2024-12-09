@@ -4,20 +4,13 @@
     {{ parent() }}
     
     {% if page.product %}
-        {% set customFieldSetName = config('AdditionalProductTab.config.customFieldSetName') %}
-        {% if customFieldSetName %}
-            {% for customFieldSet in page.product.customFieldSets %}
-                {% if customFieldSet.name == customFieldSetName %}
-                    <div class="product-detail-additional-tab-link">
-                        <a href="#zusatz-tab-{{ page.product.id }}-pane"
-                           class="product-detail-tab-navigation-link"
-                           data-bs-toggle="tab"
-                           data-off-canvas-tabs="true">
-                            {{ customFieldSet.translated.label }}
-                        </a>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
+        <div class="product-detail-additional-tab-link">
+            <a href="#zusatz-tab-{{ page.product.id }}-pane"
+               class="product-detail-tab-navigation-link"
+               data-bs-toggle="tab"
+               data-off-canvas-tabs="true">
+                {{ config('AdditionalProductTab.config.tabTitle') }}
+            </a>
+        </div>
     {% endif %}
 {% endblock %}

@@ -4,14 +4,12 @@
     <card>
         <title>Tab Einstellungen</title>
         <title lang="en-GB">Tab Settings</title>
-        
+
         <input-field type="text">
-            <name>customFieldSetName</name>
-            <label>Technischer Name der Zusatzfeldgruppe</label>
-            <label lang="en-GB">Technical name of custom field set</label>
-            <helpText>Geben Sie den technischen Namen der Zusatzfeldgruppe ein (z.B. custom_field_set_name)</helpText>
-            <helpText lang="en-GB">Enter the technical name of the custom field set (e.g. custom_field_set_name)</helpText>
-            <defaultValue></defaultValue>
+            <name>tabTitle</name>
+            <label>Tab Titel</label>
+            <label lang="en-GB">Tab Title</label>
+            <defaultValue>Zusatztab</defaultValue>
         </input-field>
 
         <input-field type="text">
