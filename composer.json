@@ -1,9 +1,10 @@
 {
     "name": "ijonis/additional-product-tab",
-    "description": "Fügt ein zusätzliches Tab auf der Produktdetailseite hinzu.",
+    "description": "Erweitert die Produktdetailseite um ein zusätzliches, konfigurierbares Tab. Ermöglicht die Anzeige von Custom Fields in einem separaten Tab auf der Produktdetailseite.",
     "version": "1.0.0",
     "type": "shopware-platform-plugin",
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "IJONIS",
@@ -11,19 +12,31 @@
         }
     ],
     "require": {
-        "shopware/core": "*",
-        "shopware/storefront": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "AdditionalProductTab\\": "src/"
-        }
+        "shopware/core": "~6.6.0",
+        "shopware/storefront": "~6.6.0"
     },
     "extra": {
         "shopware-plugin-class": "AdditionalProductTab\\AdditionalProductTab",
         "label": {
-            "en-GB": "Additional Product Tab",
-            "de-DE": "Zusätzliches Produkt-Tab"
+            "de-DE": "Zusätzliches Produkt-Tab",
+            "en-GB": "Additional Product Tab"
+        },
+        "description": {
+            "de-DE": "Fügt ein zusätzliches, konfigurierbares Tab auf der Produktdetailseite hinzu. Ideal für die Anzeige von Custom Fields.",
+            "en-GB": "Adds an additional, configurable tab to the product detail page. Perfect for displaying custom fields."
+        },
+        "manufacturerLink": {
+            "de-DE": "https://github.com/IJONIS/Additional-Tabs-on-Product-Page",
+            "en-GB": "https://github.com/IJONIS/Additional-Tabs-on-Product-Page"
+        },
+        "supportLink": {
+            "de-DE": "https://github.com/IJONIS/Additional-Tabs-on-Product-Page/issues",
+            "en-GB": "https://github.com/IJONIS/Additional-Tabs-on-Product-Page/issues"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "AdditionalProductTab\\": "src/"
         }
     }
 }

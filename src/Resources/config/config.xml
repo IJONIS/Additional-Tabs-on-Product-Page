@@ -10,15 +10,21 @@
             <label>Tab Titel</label>
             <label lang="en-GB">Tab Title</label>
             <defaultValue>Zusatztab</defaultValue>
+            <placeholder>Geben Sie den Titel des Tabs ein</placeholder>
+            <placeholder lang="en-GB">Enter the tab title</placeholder>
+            <helpText>Dieser Text wird als Titel des zusätzlichen Tabs angezeigt.</helpText>
+            <helpText lang="en-GB">This text will be displayed as the title of the additional tab.</helpText>
         </input-field>
 
         <input-field type="text">
             <name>customFieldName</name>
             <label>Technischer Name des Zusatzfeldes</label>
             <label lang="en-GB">Technical name of custom field</label>
-            <helpText>Geben Sie den technischen Namen des Zusatzfeldes ein (z.B. custom_field_name)</helpText>
-            <helpText lang="en-GB">Enter the technical name of the custom field (e.g. custom_field_name)</helpText>
-            <defaultValue></defaultValue>
+            <placeholder>z.B. custom_field_name</placeholder>
+            <placeholder lang="en-GB">e.g. custom_field_name</placeholder>
+            <helpText>Geben Sie den technischen Namen des Zusatzfeldes ein. Nur Kleinbuchstaben, Zahlen und Unterstriche sind erlaubt.</helpText>
+            <helpText lang="en-GB">Enter the technical name of the custom field. Only lowercase letters, numbers and underscores are allowed.</helpText>
+            <pattern>^[a-z0-9_]+$</pattern>
         </input-field>
     </card>
 </config>
