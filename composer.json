@@ -1,12 +1,13 @@
 {
-    "name": "yourname/additional-product-tab",
+    "name": "ijonis/additional-product-tab",
     "description": "Fügt ein zusätzliches Tab auf der Produktdetailseite hinzu.",
+    "version": "1.0.0",
     "type": "shopware-platform-plugin",
     "license": "MIT",
     "authors": [
         {
-            "name": "Ihr Name",
-            "email": "youremail@example.com"
+            "name": "IJONIS",
+            "email": "hi@ijonis.com"
         }
     ],
     "require": {
