@@ -1,0 +1,23 @@
+.product-detail-additional-tab-link {
+    margin: 1em 0;
+    padding-top: 1em;
+    border-top: 1px solid $sw-border-color;
+    
+    a {
+        color: $sw-color-brand-primary;
+        text-decoration: none;
+        font-size: 1em;
+        display: inline-flex;
+        align-items: center;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+        
+        &::before {
+            content: "\2192"; // Pfeil-Symbol
+            margin-right: 0.5rem;
+            font-size: 1.1em;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
+
+{% block page_product_detail_tabs_navigation_description %}
+    {{ parent() }}
+    {% if page.product %}
+        {% set customFieldSetName = config('AdditionalProductTab.config.customFieldSetName') %}
+        {% if customFieldSetName %}
+            {% for customFieldSet in page.product.customFieldSets %}
+                {% if customFieldSet.name == customFieldSetName %}
+                    <li class="nav-item">
+                        <a class="nav-link product-detail-tab-navigation-link"
+                           id="zusatz-tab-{{ page.product.id }}"
+                           data-bs-toggle="tab"
+                           data-off-canvas-tabs="true"
+                           href="#zusatz-tab-{{ page.product.id }}-pane"
+                           role="tab"
+                           aria-controls="zusatz-tab-{{ page.product.id }}-pane"
+                           aria-selected="false">
+                            <span>{{ customFieldSet.translated.label }}</span>
+                            <span class="product-detail-tab-navigation-icon">
+                                {% sw_icon 'arrow-medium-right' style {'pack':'solid'} %}
+                            </span>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block page_product_detail_tabs_content_description %}
+    {{ parent() }}
+    {% if page.product %}
+        {% set customFieldSetName = config('AdditionalProductTab.config.customFieldSetName') %}
+        {% if customFieldSetName %}
+            {% for customFieldSet in page.product.customFieldSets %}
+                {% if customFieldSet.name == customFieldSetName %}
+                    <div class="tab-pane fade"
+                         id="zusatz-tab-{{ page.product.id }}-pane"
+                         role="tabpanel"
+                         aria-labelledby="zusatz-tab-{{ page.product.id }}">
+                        <div class="product-detail-description tab-pane-container">
+                            <div class="cms-description-container">
+                                <h2 class="product-detail-description-title">{{ customFieldSet.translated.label }}</h2>
+                                <div class="product-detail-description-text">
+                                    {% set customFieldName = config('AdditionalProductTab.config.customFieldName') %}
+                                    {% if customFieldName and page.product.translated.customFields[customFieldName] is defined %}
+                                        {{ page.product.translated.customFields[customFieldName]|raw }}
+                                    {% else %}
+                                        <p>Kein Inhalt verfügbar</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+{% endblock %}

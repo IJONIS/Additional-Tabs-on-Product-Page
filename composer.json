@@ -1,0 +1,28 @@
+{
+    "name": "yourname/additional-product-tab",
+    "description": "Fügt ein zusätzliches Tab auf der Produktdetailseite hinzu.",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ihr Name",
+            "email": "youremail@example.com"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "shopware/storefront": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "AdditionalProductTab\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "AdditionalProductTab\\AdditionalProductTab",
+        "label": {
+            "en-GB": "Additional Product Tab",
+            "de-DE": "Zusätzliches Produkt-Tab"
+        }
+    }
+}

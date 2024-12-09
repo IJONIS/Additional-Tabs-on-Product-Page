@@ -1,0 +1,26 @@
+{
+    "name": "AdditionalProductTab",
+    "author": "Your Name",
+    "views": [
+        "@Storefront",
+        "@Plugins",
+        "@AdditionalProductTab"
+    ],
+    "style": [
+        "app/storefront/src/scss/base.scss"
+    ],
+    "script": [],
+    "asset": [],
+    "config": {
+        "fields": {
+            "sw-color-brand-primary": {
+                "label": {
+                    "en-GB": "Primary color",
+                    "de-DE": "Primärfarbe"
+                },
+                "type": "color",
+                "value": "#ffcc00"
+            }
+        }
+    }
+}
