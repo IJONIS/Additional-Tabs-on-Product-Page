@@ -7,7 +7,17 @@
         <div class="product-detail-additional-tab-link">
             <a href="javascript:void(0);"
                class="product-detail-tab-navigation-link"
-               onclick="document.querySelector('#zusatz-tab-{{ page.product.id }}').click(); setTimeout(() => document.querySelector('#zusatz-tab-{{ page.product.id }}-pane').scrollIntoView(), 50);">
+               onclick="(function() {
+                   const tabButton = document.querySelector('#zusatz-tab-{{ page.product.id }}');
+                   const tabContent = document.querySelector('#zusatz-tab-{{ page.product.id }}-pane');
+                   if (tabButton && tabContent) {
+                       tabButton.click();
+                       setTimeout(() => {
+                           const offset = tabContent.getBoundingClientRect().top + window.pageYOffset - 100;
+                           window.scrollTo({top: offset, behavior: 'smooth'});
+                       }, 150);
+                   }
+               })();">
                 {{ config('AdditionalProductTab.config.tabTitle') }}
             </a>
         </div>
