@@ -1,7 +1,7 @@
 {
     "name": "ijonis/additional-product-tab",
     "description": "Erweitert die Produktdetailseite um ein zusätzliches, konfigurierbares Tab. Ermöglicht die Anzeige von Custom Fields in einem separaten Tab auf der Produktdetailseite.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "shopware-platform-plugin",
     "license": "MIT",
     "minimum-stability": "stable",

@@ -5,10 +5,9 @@
     
     {% if page.product %}
         <div class="product-detail-additional-tab-link">
-            <a href="#zusatz-tab-{{ page.product.id }}-pane"
+            <a href="javascript:void(0);"
                class="product-detail-tab-navigation-link"
-               data-bs-toggle="tab"
-               data-off-canvas-tabs="true">
+               onclick="document.querySelector('#zusatz-tab-{{ page.product.id }}').click(); setTimeout(() => document.querySelector('#zusatz-tab-{{ page.product.id }}-pane').scrollIntoView(), 50);">
                 {{ config('AdditionalProductTab.config.tabTitle') }}
             </a>
         </div>
